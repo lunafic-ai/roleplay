@@ -10,6 +10,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Guides dated in the future stay hidden until a daily build after their date.
+future: false
+
 collections:
   guides:
     output: true
