@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# AI Roleplay Guides, by the Lunafic team
+
+> Plain guides to AI roleplay and interactive stories, written by the team behind Lunafic (https://lunafic.ai), an AI roleplay app. Every guide states the date its facts were last checked and lists Lunafic's own limits.
+
+## Guides
+
+{% assign guides = site.guides | sort: "date" | reverse %}{% for g in guides %}- [{{ g.title }}]({{ g.url | absolute_url }}): {{ g.description }}
+{% endfor %}
+## About
+
+- [About this site]({{ "/about/" | absolute_url }})
+- [Lunafic](https://lunafic.ai)
