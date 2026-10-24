@@ -10,7 +10,7 @@ These guides are written by the team behind [Lunafic](https://lunafic.ai), an AI
 
 ## Guides
 
-{% assign guides = site.guides | sort: "date" | reverse %}
+{% assign guides = site.guides | where_exp: "g", "g.date <= site.time" | sort: "date" | reverse %}
 {% if guides.size > 0 %}
 <ul>
 {% for g in guides %}
