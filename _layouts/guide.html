@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- assign live = site.guides | where_exp: "g", "g.date <= site.time" | sort: "date" | reverse -%}
+{%- assign topic_slugs = "" | split: "" -%}
+{%- for t in site.data.topics -%}
+  {%- if t.guides contains page.slug -%}{%- assign topic_slugs = t.guides -%}{%- endif -%}
+{%- endfor -%}
+{%- assign picked = "|" -%}
+{%- assign picks = "" | split: "" -%}
+{%- for g in live -%}
+  {%- if g.slug != page.slug and topic_slugs contains g.slug and picks.size < 3 -%}
+    {%- assign picks = picks | push: g -%}{%- assign picked = picked | append: g.slug | append: "|" -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for g in live -%}
+  {%- assign key = "|" | append: g.slug | append: "|" -%}
+  {%- if g.slug != page.slug and picks.size < 3 -%}{%- unless picked contains key -%}
+    {%- assign picks = picks | push: g -%}{%- assign picked = picked | append: g.slug | append: "|" -%}
+  {%- endunless -%}{%- endif -%}
+{%- endfor -%}
+<article class="post sheet h-entry">
+  <header class="post-header">
+    <h1 class="post-title p-name">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      By the Lunafic team · <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {%- if page.last_checked %} · Facts checked {{ page.last_checked | date: "%b %-d, %Y" }}{% endif %}
+    </p>
+  </header>
+
+  <div class="post-content e-content">
+    {{ content }}
+  </div>
+
+  <aside class="try-box">
+    <h2>Try it in a story</h2>
+    <p>Lunafic is our AI roleplay app. You step into a world as your own character, and the AI plays everyone else.</p>
+    <a class="button-soul" href="https://lunafic.ai/?utm_source=github-guides&amp;utm_medium=referral&amp;utm_campaign=roleplay-guides&amp;utm_content={{ page.slug }}">Start a story on Lunafic</a>
+  </aside>
+
+  {%- if picks.size > 0 %}
+  <nav class="more-guides" aria-label="More guides">
+    <h2>More guides</h2>
+    <ul class="guide-list">
+      {%- for g in picks %}
+      <li><a class="guide-card" href="{{ g.url | relative_url }}"><span class="guide-card-title">{{ g.title | escape }}</span>{% if g.description %}<span class="guide-card-desc">{{ g.description | escape }}</span>{% endif %}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+  {%- endif %}
+</article>
