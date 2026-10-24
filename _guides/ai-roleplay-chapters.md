@@ -1,7 +1,7 @@
 ---
 title: "AI App for Writing Long Stories Chapter by Chapter: How It Works"
 description: "How an AI app for writing long stories chapter by chapter works: where chapters live, what the AI remembers between them, search, export and the honest limits."
-date: 2026-10-25
+date: 2026-10-24
 last_checked: 2026-10-25
 ---
 
