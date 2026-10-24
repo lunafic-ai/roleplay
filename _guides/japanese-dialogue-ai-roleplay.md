@@ -1,7 +1,7 @@
 ---
 title: "Japanese Dialogue in AI Roleplay: How the Dual-Language Settings Work"
 description: "How AI roleplay shows Japanese dialogue with an English translation: the three language dials in Lunafic, each dialogue format, which languages, and limits."
-date: 2026-10-25
+date: 2026-10-24
 last_checked: 2026-10-25
 ---
 
