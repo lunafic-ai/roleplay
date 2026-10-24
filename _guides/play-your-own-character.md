@@ -1,7 +1,7 @@
 ---
 title: "AI Roleplay Where You Play Your Own Character: How It Works"
 description: "How AI roleplay works when you play your own character: what the AI may write, what stays yours, MC Mode versus Author Mode, and how to start on Lunafic."
-date: 2026-10-25
+date: 2026-10-24
 last_checked: 2026-10-25
 ---
 
