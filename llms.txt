@@ -8,7 +8,7 @@ permalink: /llms.txt
 
 ## Guides
 
-{% assign guides = site.guides | sort: "date" | reverse %}{% for g in guides %}- [{{ g.title }}]({{ g.url | absolute_url }}): {{ g.description }}
+{% assign guides = site.guides | where_exp: "g", "g.date <= site.time" | sort: "date" | reverse %}{% for g in guides %}- [{{ g.title }}]({{ g.url | absolute_url }}): {{ g.description }}
 {% endfor %}
 ## About
 
