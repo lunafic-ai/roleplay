@@ -22,7 +22,11 @@ defaults:
       path: ""
       type: guides
     values:
-      layout: post
+      layout: guide
+  - scope:
+      path: ""
+    values:
+      image: /assets/og-image.png
 
 header_pages:
   - about.md
