@@ -1,0 +1,29 @@
+title: AI Roleplay Guides
+description: Plain guides to AI roleplay and interactive stories, written by the team behind Lunafic.
+url: "https://lunafic-ai.github.io"
+baseurl: "/roleplay"
+lang: en
+author: Lunafic team
+
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: post
+
+header_pages:
+  - about.md
+
+exclude:
+  - README.md
