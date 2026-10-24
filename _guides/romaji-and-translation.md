@@ -1,7 +1,7 @@
 ---
 title: "Romaji and Translation in AI Roleplay: A Lookup Table for Anime Dialogue"
 description: "A lookup page for the romaji line in AI roleplay: spelling rules, particles, honorifics, words for I and sentence endings, plus how Lunafic shows translation."
-date: 2026-10-25
+date: 2026-10-24
 last_checked: 2026-10-25
 ---
 
