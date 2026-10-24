@@ -1,0 +1,16 @@
+# Home page groups. Add each new guide's file name (without .md) to one group.
+# A live guide that is not listed here still shows, under "More guides".
+- name: Start here
+  guides:
+    - ai-roleplay-chapters
+    - play-your-own-character
+    - ai-plays-everyone-else
+- name: Japanese and anime
+  guides:
+    - japanese-dialogue-ai-roleplay
+    - romaji-and-translation
+    - ai-anime-fanfiction-apps
+- name: Long stories
+  guides:
+    - ai-roleplay-consistency
+    - ai-roleplay-world-wiki
